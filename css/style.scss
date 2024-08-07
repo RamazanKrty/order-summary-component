@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+    --white: #fff;
+}
+
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--paleBlue);
+    position: relative;
+}
+
+.container {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background: var(--white);
+    margin: 0 2rem;
+
+    .hero {
+        img {
+            width: 100%;
+            border-radius: 2rem 2rem 0 0;
+        }
+    }
+
+    .content {
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--darkBlue);
+            margin: 4rem 0 2rem;
+        }
+        p {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--desaturedBlue);
+            padding: 0 5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        background: var(--veryPaleBlue);
+        padding: 2rem;
+        border-radius: 1rem;
+
+        .price-plan {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+
+            .price-plan-icon {
+                padding-right: 2rem;
+            }
+
+            .price-plan-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 46px;
+
+                h2 {
+                    font-size: 1.6rem;
+                    color: var(--darkBlue);
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 1.6rem;
+                    color: var(--desaturedBlue);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .price-link {
+            a {
+                color: var(--brightBlue);
+                font-size: 1.4rem;
+                font-weight: 700;
+
+                &:hover {
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: var(--desaturedBlue);
+                }
+            }
+        }
+    }
+
+    .button {
+        width: 75%;
+        margin: 2rem 0;
+        
+        button {
+            color: var(--white);
+            font-size: 1.4rem;
+            background: var(--brightBlue);
+            width: 100%;
+            border: none;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0px 10px 10px 0px var(--paleBlue);
+
+            &:hover {
+                cursor: pointer;
+                background:var(--desaturedBlue);
+            }
+        }
+    }
+
+    .cancel-button {
+        margin: 1rem 0 4rem;
+
+        a {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--desaturedBlue);
+
+            &:hover {
+                cursor: pointer;
+                color: var(--darkBlue);
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+
+    a {
+        color: var(--darkBlue);
+    }
+}
